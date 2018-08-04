@@ -1,0 +1,12 @@
+[bigquery]
+project_id="destination-google-project-id"
+dataset_name="destination-dataset"
+table_name="destination-table-name"
+gcs_tmp_path="gs://gcs-tmp-bucket/bqsqoop/"
+
+[extractor.es]
+url="localhost:9200,localhost:9201"
+index="source-es-index-name"
+timeout="60s"
+scroll_size=500
+fields=["_all"]
